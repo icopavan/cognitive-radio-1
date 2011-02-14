@@ -1,0 +1,447 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2010.11.15)  16 NOV 2010 03:10
+entering extended mode
+**C:/Users/gitte/Documents/DySPAN/paper.tex
+(C:/Users/gitte/Documents/DySPAN/paper.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+(C:\Users\gitte\Documents\DySPAN\IEEEtran.cls
+Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 366.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen104
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen105
+\CLASSINFOnormalsizeunitybaselineskip=\dimen106
+\IEEEnormaljot=\dimen107
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+\IEEEilabelindentA=\dimen108
+\IEEEilabelindentB=\dimen109
+\IEEEilabelindent=\dimen110
+\IEEEelabelindent=\dimen111
+\IEEEdlabelindent=\dimen112
+\IEEElabelindent=\dimen113
+\IEEEiednormlabelsep=\dimen114
+\IEEEiedmathlabelsep=\dimen115
+\IEEEiedtopsep=\skip41
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@IEEEsubequation=\count85
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count86
+\c@table=\count87
+\@IEEEeqnnumcols=\count88
+\@IEEEeqncolcnt=\count89
+\@IEEEtmpitemindent=\dimen116
+\c@IEEEbiography=\count90
+\@IEEEtranrubishbin=\box26
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks15
+\verbatim@line=\toks16
+\verbatim@in@stream=\read1
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen117
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2010/09/14 v0.05b Graphics/color for pdfTeX
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen120
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen121
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks19
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks20
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks21
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(C:\Users\gitte\AppData\Roaming\MiKTeX\2.9\tex\latex\algorithms\algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@ALC@unique=\count104
+\c@ALC@line=\count105
+\c@ALC@rem=\count106
+\c@ALC@depth=\count107
+\ALC@tlm=\skip47
+\algorithmicindent=\skip48
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen128
+\extrarowheight=\dimen129
+\NC@list=\toks23
+\extratabsurround=\skip49
+\backup@length=\skip50
+)
+(C:\Users\gitte\AppData\Roaming\MiKTeX\2.9\tex\latex\subfig\subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(C:\Users\gitte\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen130
+\captionmargin@=\dimen131
+\captionwidth=\dimen132
+\caption@indent=\dimen133
+\caption@parindent=\dimen134
+\caption@hangindent=\dimen135
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used on input line 1084.
+)
+\c@KVtest=\count108
+\sf@farskip=\skip51
+\sf@captopadj=\dimen136
+\sf@capskip=\skip52
+\sf@nearskip=\skip53
+\c@subfigure=\count109
+\c@subfigure@save=\count110
+\c@lofdepth=\count111
+\c@subtable=\count112
+\c@subtable@save=\count113
+\c@lotdepth=\count114
+\sf@top=\skip54
+\sf@bottom=\skip55
+)
+(C:\Users\gitte\AppData\Roaming\MiKTeX\2.9\tex\latex\sttools\stfloats.sty
+Package: stfloats 1999/10/22
+\@dblbotnum=\count115
+\c@dblbotnumber=\count116
+)
+(C:\Users\gitte\Documents\DySPAN\paper.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+
+(C:\Users\gitte\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count117
+\scratchdimen=\dimen137
+\scratchbox=\box29
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen138
+\MPnumerator=\count121
+\everyMPtoPDFconversion=\toks25
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption3 Info: subfig package 1.2 or 1.3 is loaded.
+LaTeX Info: Redefining \subref on input line 286.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 341.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11> on input line 341.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.69997> on input line 341.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.5> on input line 341.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 341.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 341.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 341.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 341.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 341.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 341.
+
+(C:\Users\gitte\Documents\DySPAN\introduction.tex
+Underfull \vbox (badness 3701) has occurred while \output is active []
+
+ [1{C:/Users/gitte/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+])
+(C:\Users\gitte\Documents\DySPAN\algorithm.tex [2]
+<figures/algorithm/proof2.pdf, id=18, 566.115pt x 381.425pt>
+File: figures/algorithm/proof2.pdf Graphic file (type pdf)
+
+<use figures/algorithm/proof2.pdf> [3 <C:/Users/gitte/Documents/DySPAN/figures/
+algorithm/proof2.pdf>]) (C:\Users\gitte\Documents\DySPAN\contribution1.tex
+<figures/contribution1/distri.pdf, id=33, 572.53903pt x 287.474pt>
+File: figures/contribution1/distri.pdf Graphic file (type pdf)
+
+<use figures/contribution1/distri.pdf> [4 <C:/Users/gitte/Documents/DySPAN/figu
+res/contribution1/distri.pdf>] (C:\Users\gitte\Documents\DySPAN\table.tex
+<figures/contribution1/vb2it0.png, id=51, 679.53876pt x 667.49374pt>
+File: figures/contribution1/vb2it0.png Graphic file (type png)
+
+<use figures/contribution1/vb2it0.png>
+<figures/contribution1/vb2it1.png, id=52, 679.53876pt x 663.47874pt>
+File: figures/contribution1/vb2it1.png Graphic file (type png)
+
+<use figures/contribution1/vb2it1.png>
+<figures/contribution1/vb2it2.png, id=53, 678.535pt x 663.47874pt>
+File: figures/contribution1/vb2it2.png Graphic file (type png)
+
+<use figures/contribution1/vb2it2.png>
+<figures/contribution1/vb2it3.png, id=54, 676.5275pt x 662.475pt>
+File: figures/contribution1/vb2it3.png Graphic file (type png)
+
+<use figures/contribution1/vb2it3.png>)
+Underfull \vbox (badness 2894) has occurred while \output is active []
+
+
+<figures/contribution1/correlation.png, id=55, 726.3135pt x 416.757pt>
+File: figures/contribution1/correlation.png Graphic file (type png)
+
+<use figures/contribution1/correlation.png>)
+(C:\Users\gitte\Documents\DySPAN\contribution2.tex [5 <C:/Users/gitte/Documents
+/DySPAN/figures/contribution1/vb2it0.png (PNG copy)> <C:/Users/gitte/Documents/
+DySPAN/figures/contribution1/vb2it1.png (PNG copy)> <C:/Users/gitte/Documents/D
+ySPAN/figures/contribution1/vb2it2.png (PNG copy)> <C:/Users/gitte/Documents/Dy
+SPAN/figures/contribution1/vb2it3.png (PNG copy)> <C:/Users/gitte/Documents/DyS
+PAN/figures/contribution1/correlation.png>]
+<figures/contribution2/threeForwarding.pdf, id=62, 332.3496pt x 312.62401pt>
+File: figures/contribution2/threeForwarding.pdf Graphic file (type pdf)
+
+<use figures/contribution2/threeForwarding.pdf>
+<figures/contribution2/fourForwarding.pdf, id=63, 357.69873pt x 355.71545pt>
+File: figures/contribution2/fourForwarding.pdf Graphic file (type pdf)
+
+<use figures/contribution2/fourForwarding.pdf>
+<figures/contribution2/hexagonalTiling.pdf, id=64, 489.27155pt x 491.2474pt>
+File: figures/contribution2/hexagonalTiling.pdf Graphic file (type pdf)
+
+<use figures/contribution2/hexagonalTiling.pdf>
+<figures/contribution2/squareTiling.pdf, id=65, 469.28014pt x 442.98552pt>
+File: figures/contribution2/squareTiling.pdf Graphic file (type pdf)
+
+<use figures/contribution2/squareTiling.pdf>
+<figures/contribution2/partitioning.pdf, id=66, 468.04591pt x 497.46931pt>
+File: figures/contribution2/partitioning.pdf Graphic file (type pdf)
+
+<use figures/contribution2/partitioning.pdf>
+<figures/contribution2/userSelection.pdf, id=67, 532.87302pt x 501.04071pt>
+File: figures/contribution2/userSelection.pdf Graphic file (type pdf)
+
+<use figures/contribution2/userSelection.pdf>
+<figures/contribution2/nbSends2.png, id=68, 1210.5225pt x 685.56125pt>
+File: figures/contribution2/nbSends2.png Graphic file (type png)
+
+<use figures/contribution2/nbSends2.png>
+<figures/contribution2/locproboverlap2.png, id=69, 726.3135pt x 401.0985pt>
+File: figures/contribution2/locproboverlap2.png Graphic file (type png)
+
+<use figures/contribution2/locproboverlap2.png>
+<figures/contribution2/misclassified2.png, id=70, 751.00575pt x 417.35925pt>
+File: figures/contribution2/misclassified2.png Graphic file (type png)
+
+<use figures/contribution2/misclassified2.png>
+<figures/contribution2/error2.png, id=71, 738.96075pt x 399.894pt>
+File: figures/contribution2/error2.png Graphic file (type png)
+
+<use figures/contribution2/error2.png> [6 <C:/Users/gitte/Documents/DySPAN/figu
+res/contribution2/threeForwarding.pdf> <C:/Users/gitte/Documents/DySPAN/figures
+/contribution2/fourForwarding.pdf> <C:/Users/gitte/Documents/DySPAN/figures/con
+tribution2/hexagonalTiling.pdf> <C:/Users/gitte/Documents/DySPAN/figures/contri
+bution2/squareTiling.pdf> <C:/Users/gitte/Documents/DySPAN/figures/contribution
+2/partitioning.pdf> <C:/Users/gitte/Documents/DySPAN/figures/contribution2/user
+Selection.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+) [7 <C:/Users/gitte/Documents/DySPAN/figures/contribution2/nbSends2.png (PNG c
+opy)> <C:/Users/gitte/Documents/DySPAN/figures/contribution2/locproboverlap2.pn
+g> <C:/Users/gitte/Documents/DySPAN/figures/contribution2/misclassified2.png> <
+C:/Users/gitte/Documents/DySPAN/figures/contribution2/error2.png>]
+(C:\Users\gitte\Documents\DySPAN\paper.bbl)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[8
+
+] (C:\Users\gitte\Documents\DySPAN\paper.aux) ) 
+Here is how much of TeX's memory you used:
+ 3375 strings out of 494019
+ 53258 string characters out of 3143881
+ 118687 words of memory out of 3000000
+ 6613 multiletter control sequences out of 15000+200000
+ 43324 words of font info for 83 fonts, out of 3000000 for 9000
+ 717 hyphenation exceptions out of 8191
+ 36i,14n,45p,1436b,351s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2
+.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmbx7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (8 pages, 520607 bytes).
+PDF statistics:
+ 193 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+

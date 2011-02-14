@@ -1,0 +1,131 @@
+\relax 
+\citation{sensing1}
+\citation{sensing2}
+\citation{geoLocDyspan}
+\citation{beacon}
+\citation{sofie}
+\citation{ecc}
+\citation{bookPathlossModel}
+\citation{sofie}
+\citation{sofie}
+\citation{dtc}
+\citation{dtc2}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Preliminaries}{2}}
+\newlabel{sec:pre}{{I}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {I-A}}Local power variance}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {I-B}}Distance to contour flooding}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Iterative power adjustment algorithm}{2}}
+\newlabel{sec:ipa}{{II}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Overview}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Local received power estimation}{2}}
+\newlabel{sec:power est}{{\unhbox \voidb@x \hbox {II-B}}{2}}
+\citation{sofie}
+\citation{dtc}
+\citation{sofie}
+\citation{sofie}
+\newlabel{eq:wls}{{1}{3}}
+\newlabel{eq:wij}{{2}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Distance to contour flooding}{3}}
+\newlabel{sec:dtc1}{{\unhbox \voidb@x \hbox {II-C}}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \cite  {sofie} Users with the same footpoint are grouped together by a Voronoi Tiling. User C has footpoint $f_1$ and it lies in the transmission range of both users A and B. If the backoff timer of B goes off before the back-off timer of A, user C gets updated first by user B and it will incorrectly store $f_2$ as its footpoint. After user C is updated by user B, it starts a back-off timer to update its neighbors. However, when the back-off timer of user A goes off, C receives its correct footpoint $f_1$. If C has already updated its neighbors before it receives the update from A, user C will have to update its neighbors a second time.}}{3}}
+\newlabel{fig:misclass}{{1}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-D}}Path loss estimation}{3}}
+\newlabel{sec:pathloss est}{{\unhbox \voidb@x \hbox {II-D}}{3}}
+\citation{sofie}
+\citation{sofie}
+\citation{ecc}
+\citation{ecc}
+\citation{ecc}
+\newlabel{eq:fit}{{4}{4}}
+\newlabel{eq:pow1}{{5}{4}}
+\newlabel{eq:pow2}{{6}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-E}}Path loss model}{4}}
+\newlabel{eq:plModel}{{7}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Reliability of the IPA algorithm in terms of location probability}{4}}
+\newlabel{sec:contri1}{{III}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  \cite  {ecc} The Gaussian distributions of the power of a secondary transmitter $S$ and a primary transmitter $P$ at one gridpoint. To compute the location probability at a location, we compute $Pr\{P_P\geq S\}$.}}{4}}
+\newlabel{fig:compLP}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}title}{4}}
+\newlabel{eq:lp}{{8}{4}}
+\newlabel{eq:lpCDF}{{9}{4}}
+\citation{storm}
+\citation{1hopflooding}
+\citation{1hopflooding}
+\citation{2hop}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Reliability of the IPA algorithm in terms of the location probability and overlap of the interference threshold contours for three different scenarios. }}{5}}
+\newlabel{tab:locProbEffect}{{I}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Demonstration of the IPA algorithm for example 2 from Tab.\nobreakspace  {}I\hbox {}. A primary transmitter is present in the lower left corner of the scenario and its interference threshold contour is indicated in red. The $95\%$ location probability contour is indicated in green. In the upper right corner a secondary transmitter is present with the interference contour indicated in blue.}}{5}}
+\newlabel{fig:iterationsLP}{{3}{5}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {primary transmitter}}}{5}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {update 1}}}{5}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {update 2}}}{5}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {update 3}}}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Simulation results}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Reduction of the $95\%$ location probability contour in function of the overlap of the primary and secondary contour computed by the IPA algorithm.}}{5}}
+\newlabel{fig:connectionLPOverlap}{{4}{5}}
+\newlabel{eq:deltalp}{{10}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Redundancy reduction of distance-to-contour flooding}{5}}
+\newlabel{sec:contri2}{{IV}{5}}
+\citation{dtc2}
+\citation{dtc2}
+\citation{dtc2}
+\citation{dtc2}
+\citation{dtc2}
+\newlabel{fig:threeforwards}{{5a}{6}}
+\newlabel{sub@fig:threeforwards}{{(a)}{a}}
+\newlabel{fig:fourforwards}{{5b}{6}}
+\newlabel{sub@fig:fourforwards}{{(b)}{b}}
+\newlabel{fig:hextiling}{{5c}{6}}
+\newlabel{sub@fig:hextiling}{{(c)}{c}}
+\newlabel{fig:squaretiling}{{5d}{6}}
+\newlabel{sub@fig:squaretiling}{{(d)}{d}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  \cite  {dtc2} Fig.\nobreakspace  {}5a\hbox {} and Fig.\nobreakspace  {}5b\hbox {} show the ideal topology for a user with respectively three and four neighbors. This topology minimizes the overlapping areas of the transmission ranges. Fig.\nobreakspace  {}5c\hbox {} and Fig.\nobreakspace  {}5d\hbox {} show the resulting network topologies for respectively three and four neighbors.}}{6}}
+\newlabel{fig:forwarding}{{5}{6}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{6}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{6}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{6}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Ideal network topology}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Forwarding user selection}{6}}
+\newlabel{subsec:forwardingSel}{{\unhbox \voidb@x \hbox {IV-B}}{6}}
+\newlabel{fig:partitioning1}{{6a}{6}}
+\newlabel{sub@fig:partitioning1}{{(a)}{a}}
+\newlabel{fig:partitioning2}{{6b}{6}}
+\newlabel{sub@fig:partitioning2}{{(b)}{b}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \cite  {dtc2} Fig.\nobreakspace  {}6a\hbox {} demonstrates the partitioning of the transmission range of user $s$. Fig.\nobreakspace  {}6b\hbox {} shows an example of which users are selected as forwarding neighbors. }}{6}}
+\newlabel{fig:partitioning}{{6}{6}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{6}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Simulation results}{6}}
+\citation{sofie}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusions and future work}{7}}
+\newlabel{sec:conc}{{V}{7}}
+\newlabel{fig:dtc2nbSends}{{7a}{7}}
+\newlabel{sub@fig:dtc2nbSends}{{(a)}{a}}
+\newlabel{fig:dtc2locprob}{{7b}{7}}
+\newlabel{sub@fig:dtc2locprob}{{(b)}{b}}
+\newlabel{fig:dtc2misclass}{{7c}{7}}
+\newlabel{sub@fig:dtc2misclass}{{(c)}{c}}
+\newlabel{fig:dtc2error}{{7d}{7}}
+\newlabel{sub@fig:dtc2error}{{(d)}{d}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Fig.\nobreakspace  {}7a\hbox {}: The percentage of forwarding users for DTC2 in comparison with the number of forwarding users for DTC. Fig.\nobreakspace  {}7b\hbox {}: Percentage overlap of the primary contour by the secondary contour together with the percentage reduction of the $95\%$ location probability contour of the primary transmitter in comparison with the absence of a secondary transmitter. Fig.\nobreakspace  {}7c\hbox {}: Percentage of misclassified users and number of receives (or updates) for DTC and DTC2. Fig.\nobreakspace  {}7d\hbox {}: The average error on the distance to footpoint for the DTC2 algorithm together with the delivery ratio.}}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{7}}
+\bibstyle{IEEEtran}
+\bibdata{paper}
+\bibcite{sensing1}{1}
+\bibcite{sensing2}{2}
+\bibcite{geoLocDyspan}{3}
+\bibcite{beacon}{4}
+\bibcite{sofie}{5}
+\bibcite{ecc}{6}
+\bibcite{bookPathlossModel}{7}
+\bibcite{dtc}{8}
+\bibcite{dtc2}{9}
+\bibcite{storm}{10}
+\bibcite{1hopflooding}{11}
+\bibcite{2hop}{12}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Acknowledgments}{8}}
+\@writefile{toc}{\contentsline {section}{References}{8}}

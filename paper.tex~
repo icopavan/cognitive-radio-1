@@ -1,0 +1,594 @@
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[draftcls,onecolumn]{IEEEtran}
+%\documentclass[conference]{IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+\usepackage{verbatim}
+\usepackage{amstext}
+
+\let\oldhat\hat
+\renewcommand{\vec}[1]{\mathbf{#1}}
+% \renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+%\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+% subfigure.sty was written by Steven Douglas Cochran. This package makes it
+% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+% work, it is a good idea to load it with the tight package option to reduce
+% the amount of white space around the subfigures. subfigure.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+% subfig.sty, also written by Steven Douglas Cochran, is the modern
+% replacement for subfigure.sty. However, subfig.sty requires and
+% automatically loads Axel Sommerfeldt's caption.sty which will override
+% IEEEtran.cls handling of captions and this will result in nonIEEE style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later 
+% (recommended due to many improvements over 1.2) of subfig.sty supports
+% the caption=false option directly:
+\usepackage[caption=false,font=footnotesize]{subfig}
+%
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% The latest version and documentation of caption.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Documentation is contained in the stfloats.sty comments as well as in the
+% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
+% does not allow \baselineskip to stretch. Authors submitting work to the
+% IEEE should note that IEEE rarely uses double column equations and
+% that authors should try to avoid such use. Do not be tempted to use the
+% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
+% not format its papers in such ways.
+
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% Read the url.sty source comments for usage information. Basically,
+% \url{my_url_here}.
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Study and improvement of a transmission power control algorithm}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\IEEEauthorblockN{Gitte Vanwinckelen}
+\IEEEauthorblockA{Department of Computer Science\\
+Katholieke Universiteit Leuven\\
+Atlanta, Georgia 30332--0250\\
+Email: gitte.vanwinckelen@cs.kuleuven.be}
+\and
+\IEEEauthorblockN{Homer Simpson}
+\IEEEauthorblockA{Twentieth Century Fox\\
+Springfield, USA\\
+Email: homer@thesimpsons.com}
+\and
+\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+\IEEEauthorblockA{Starfleet Academy\\
+San Francisco, California 96678-2391\\
+Telephone: (800) 555--1212\\
+Fax: (888) 555--1212}}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3}, 
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+%\boldmath
+The abstract goes here.
+\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the conference you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals/conferences frown on
+% math in the abstract anyway.
+
+% no keywords
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+\section{Introduction}
+% \subsection{Scope and problem description}
+
+Time, space and frequency spectrum are three important shared resources in wireless communications. But these resources are limited and with the continuous development of new wireless technologies and the increasing number of coexisting wireless networks there is a need to share these resources more efficiently. 
+
+In this paper we focus on sharing space by transmission power control (TCP). In a wireless network we can make a distinction between primary and secondary users. Primary users are licensed and have priority to use the spectrum. Secondary users are not licensed and are only allowed to use the spectrum if it is not needed by the primary users. The interference that the secondary users cause to the primary users has to be as small as possible. The goal is to make the transmission range of any potential secondary transmitter as large as possible while causing as little interference as possible to any primary users.
+
+A secondary transmitter needs knowledge of the propagation conditions (?) and the presence of primary users to find its optimal transmission power. In the literature several methods are presented to detect primary users. The first possibility is \textit{spectrum sensing}. But the sensitivity requirements are high to detect all activity of the primary users and overcome the hidden terminal problem. A possible solution is cooperative sensing where the sensing results of multiple secondary users are combined to make a decision on the presence of a primary transmitter. A second possibility is the use of a central \textit{database}. This technique is used in the IEEE 802.22 standard where unlicensed devices make use of spectrum holes in the TV bands.
+
+In the work of Pollin, Adams and Bahai a third possibility is presented were a flooding algorithm is used to communicate the presence of primary transmitters to the rest of the network \cite{sofie}. This approach has the advantage that no expensive sensing techniques are needed. In this iterative power adjustment (IPA) algorithm the power of the secondary transmitter is iteratively adapted based on the estimated distance between the interference threshold contours of the primary transmitters and the secondary transmitter. The estimated distance between the contours is communicated with a flooding algorithm from the primary transmitters to the network. 
+
+In this paper we adapt the flooding step of the IPA algorithm to decrease the amount of necessary communication between the wireless users in the network. Next we compare the performance of the original and the adapted IPA algorithm in terms of the number of iteration steps and the amount of interference caused by the secondary transmitter.
+We also 
+
+%\subsection{Methods of investigation}
+The IPA algorithm is evaluated with MATLAB in a simulated two-dimensional environment. The simulation uses a general pathloss model that consists of a distance dependent trend, shadowing and fast fading. The exact pathloss model is not of importance because the IPA algorithm is independent of this model and only makes use of local pathloss measurements.
+
+\subsection{Principal results}
+\subsection{Conclusions}
+\subsection{Organization of the paper}
+
+
+\begin{comment}
+\section{Methods}
+The IPA algorithm is implemented in MATLAB. A general pathloss model is used. The environment is two-dimensional. 
+
+Relies on GPS or a localization algorithm.
+
+\subsection{Pathloss model}
+The pathloss model consists of three components: a distance dependent trend, shadowing and fast fading.
+Note that the exact pathloss model used is not of importance because the IPA algorithm is general applicable. It only makes use of local pathloss measurements.
+
+The IPA algorithm was also tested in a real environment in the work of Pollin, Adams and Bahai.
+\end{comment}
+
+\section{Design decisions}
+
+The goal of the IPA algorithm is to find the optimal transmission power of any secondary transmitter. The optimal transmission power maximizes the transmission range of the secondary transmitter while causing as little interference as possible to any primary users. To find its optimal transmission power, a secondary transmitter needs knowledge of the radio propagation conditions and the presence of any primary transmitters. 
+
+\subsection{Local power estimation}
+
+Radio propagation is typically modeled by a model consisting of three components: a distance dependent pathloss trend, shadowing and fast fading. Shadow losses cause the received signal strength (RSS) to vary slowly in time and space around the distance dependent trend. Fast fading originates from multipath effects and causes the RSS to vary on a small scale. Pollin, Adams and Bahai deduce from a measurement campaign that propagation conditions are difficult to model globally \cite{sofie}. (?) (In the measurement campaign the RSS from an 802.11 antenna on top of Cory Hall at UC Berkeley is measured in the area. They make three observations from the measurements. Firstly, there is no obvious relationship between the RSS and the distance between the transmitter and the receiver. Secondly, the measurements show that shadowing is an anisotropic effect. Lastly, the RSS measurements are noisy due to fast fading.) Because fast fading makes the measurements noisy, this effect is averaged out in time and space. Averaging out fast fading in space is done with a Moving Least Squares (MLS) algorithm. They also conclude from these observations that it is difficult to model radio propagation in a global way. Therefore the IPA algorithm does not rely on a global propagation model but uses only local RSS measurements.
+
+\subsection{Distance to contour flooding}
+To detect the primary users and compute the distance between the transmission range of a primary user and the secondary user, no expensive sensing techniques are used. Instead, a more efficient distance to contour flooding algorithm, DTC1, is used. This algorithm uses a backoff timer to decrease the number of forwarded messages with respect to regular flooding \cite{dtc}. With the DTC1 flooding algorithm the number of forwarded messages is slightly larger than N, with N the number of users in the network. In this paper we develop an alternative distance to contour flooding algorithm which decreased the number of forwarded messages with a constant factor (4). This adapted flooding algorithm, DTC2, is based on the polygon tiling algorithm proposed by In, Trong and Hyunseung \cite{dtc2}.
+
+\begin{comment}
+\subsection{Iterative power control}
+
+Design decisions:
+1) Local channel estimation
+Not relying on a pathloss model (propagation trends) but using local measurements
+
+averaging out fast fading effects over time and space.
+Over space this is done with a Moving Least Squares algorithm
+
+2) Distance to contour flooding
+Not use sensing techniques to detect primary users instead use a flooding algorithm.
+
+Using the flooding algorithm from this reference. Number of forwarded packets required is close to N with N the number of users in the network.
+
+From paper 9
+Design criterium: minimum cost forwarding (can be hop count, energy, delay)
+Setting up a cost field
+Using the backoff timer to only let the optimal cost nodes forward.
+
+3) Iterative power control
+We start from a worst case pathloss model after we received the distance between the contours
+Next we update iteratively
+Estimation of the pathloss is always at the point closest to the first transmitters contour
+Convergence in a few steps and around N communications per step (and secondary transmitter)
+\end{comment}
+
+\section{Overview of the iterative power adjustment algorithm}
+
+We give an overview of the IPA algorithm in a situation with one primary and one secondary transmitter. But the algorithm is also applicable in a situation with multiple primary transmitters.
+When the RSS of a user is used in the algorithm, an estimate $\hat{RSS}$ is computed with a MLS algorithm to average out the noise due to fast fading. This is discussed in section \ref{sec:power est}.
+
+First, receivers of the primary transmitters compute their $\hat{RSS}$ to find the users that define the interference threshold contour of the primary transmitter. Next, every user in the network is informed about his distance to the contour by means of the distance-to-contour flooding algorithm. This flooding algorithm is discussed in section \ref{sec:dtc1}. Based on the distance to the contour of the primary transmitter and a worst case pathloss model, a secondary transmitter can now make a first estimate of its transmission power. This initial estimate can iteratively be made more accurate based on information about the propagation conditions between the secondary and primary transmitter. Firstly, the new contour-contour distance is taken into account. Secondly, the pathloss between the contour of the secondary and primary transmitter is estimated at the user that is closest to the primary transmitter and still within the transmission range of the secondary transmitter. We discuss the iterative adaptation of the transmission power in section \ref{sec:pathloss est}.
+
+\section{Received power estimation} \label{sec:power est}
+
+Reliable RSS estimates are needed for two reasons: To determine the interference threshold contours and to make accurate pathloss estimations. The individual RSS measurements are noisy due to fast fading. In order to average out this noise, a MLS algorithm is used. Using a MLS algorithm has the advantage that it does not rely on a global pathloss model.
+
+The MLS algorithm does not only take into account the RSS measurement of the user where the estimate is computed but also the measurements from the neighboring users. The size of the neighborhood is defined by a spatial weighting function (also called kernel function). Assume we want to determine the $\hat{RSS}$ of user $N$ at position $x_N$. We search the coefficients $\vec{a}$ of a polynomial $\vec{p}$ by minimizing the weighted least squares function from equation \ref{eq:wls}. To find $\vec{a}$, the local received power $RSS_N$ of user $N$ is taken into account together with the local received power $RSS_i$ of the neighbors of $N$, with $i=1..$NbNeighbors.
+\begin{equation} \label{eq:wls}
+\hat{\vec{a}}_N = arg \min_a \sum_i w_{Nj}(\vec{a}^T \vec{p}(\vec{x}_i)-\vec{RSS_i})^2
+\end{equation}
+The local RSS measurements are weighted by $w_{ij}$ according to the distance from user $N$, as demonstrated in equation \ref{eq:wij}.
+\begin{equation} \label{eq:wij}
+w_{ij} = \begin{cases} 
+(1-r_{ij}^2)^3 &  \text{, if $r_{ij} \leq 1$} \\ 
+0 & \text{, otherwise}
+\end{cases}
+\end{equation}
+$r_{ij}$ is the normalized distance between user $j$ and $i$. The distance is normalized by the kernelwidth $h$ as follows: $r_{ij}=\frac{\begin{Vmatrix}\vec{x}_i-\vec{x}_j\end{Vmatrix}}{h}$.
+From the coefficients $\hat{\vec{a}}_N$ we can compute $\hat{RSS}_N$:
+\begin{equation}
+\hat{RSS}_N = \hat{\vec{a}}^T_N \cdot \vec{p}(\vec{x}_N)
+\end{equation}
+
+The MLS algorithm has two parameters: kernel width $h$ and the polynomial order of $\vec{p}$. These parameters depend on the noise power and can be optimized with respect to the average squared error on $\hat{RSS}$. This is demonstrated in figure \ref{fig:paramtuning}. The polynomial order and the size of the kernelwidth determine how much detail of the RSS variations is modeled. Polynomial orders of 0, 1 and 2 are investigated in figure \ref{fig:paramtuning}. The larger the polynomial order the more detail can be fitted by the local model. When the noise power is high, a constant polynomial order is optimal because it smooths out the noise. When the noise power is small, a quadratic polynomial that fits more detail can be used. The optimal value of the kernelwidth has a different value depending on the polynomial order. When the kernelwidth is too small, noise is included due to overfitting but when the kernelwidth is too large the RSS variations are smoothed out too much.
+
+% Notice the axes clutching against the other figure !? 
+\begin{figure}
+\centering
+\subfloat[]{\includegraphics[scale=0.75]{figures/kernelwidth.pdf}}
+\subfloat[]{\includegraphics[scale=0.75]{figures/sqr_diff.pdf}}
+\caption{\label{fig:paramtuning} \cite{sofie}}
+\end{figure}
+
+\subsection{Adapting the kernelwidth to the number of found neighbors}
+Problem: Sometimes there are not enough neighbors found to solve the least squares problem and find the coefficients. Therefore the kernelwidth can be made larger. 
+Second solution: Adapt the polynomial order to the number of neighbors found.
+
+\section{Distance to contour flooding} \label{sec:dtc1}
+
+An efficient flooding algorithm DTC1 is used to signal the presence of any primary transmitters. The goal of the distance-to-contour flooding algorithm is to inform every user in the network about his distance to the contour of the primary user. A potential secondary transmitter can then determine the position of the wireless user within its transmission range that is closest to the contour of the primary user. In the next step of the IPA algorithm the pathloss estimate of this closest secondary user can then be used to improve the estimate of the optimal transmission power of the secondary transmitter.
+
+\subsection{Centralized algorithm}
+
+The distance-to-contour flooding algorithm is similar to the shortest path algorithm of Dijkstra. However, Dijkstra's algorithm only uses user-to-user distances whereas the current algorithm uses straight line distances determined with GPS or a localization algorithm. For a better understanding of the DTC1 algorithm we first discuss the centralized version where a priority queue is used to keep track of all information. This is not possible in a practical scenario where we assume a user only communicates with his one-hop neighbors. The distributed version of the algorithm discussed in the next section takes this into account.
+
+Consider a scenario with transmitter P and $n$ wireless users. All users that receive P with a RSS larger than the interference contour threshold, $RSS_{th}$, are within the transmission range of P and are called internal users. The \textit{footpoint} $f_i$ of a user $i$ with respect to P is defined as the internal user of P that is closest to $i$. The goal of the distance-to-contour algorithm is to inform all users about their footpoint $f$ and the distance $d$ to this footpoint.
+
+\begin{itemize}
+\item During initialization all internal users of P are added to a priority queue. The footpoint of an internal user is the position of the user himself, $f_i = x_i$, and thus $d = 0$. For all other users $d = \infty$.
+\item The user with the smallest distance, user $N$, is taken from the queue. If this is more than one user, a random user is chosen from this set.
+\item User $N$ now informs his one-hop neighbors about his footpoint $f_N=x_j$. Based on this information the neighbors of $N$ update their footpoint and distance as follows: consider user $M$ which is a neighbor of $N$. The footpoint of $M$ is $f_M=x_k$ and the distance between $M$ and $x_k$ is $d_M$. There are two possibilities:
+\begin{enumerate}
+ \item If $d(x_j,M) < d_M$ than \\	
+	$f_M \leftarrow x_j$ and $d_M \leftarrow d(x_j,M)$. 
+	User $M$ is added to the queue.
+ \item If $d(x_j,M) \geq d_M$ than the footpoint of $M$ does not change and $M$ is not added to the queue.
+\end{enumerate} 
+ 
+\item When all the neighbors of $N$ are updated, $N$ is removed from the queue. The next user is now taken from the queue and all his neighbors are updated.
+\item The process is repeated until the queue is empty
+\end{itemize}
+
+\subsection{Distributed algorithm}
+To minimize the number of forwarding messages in the distance-to-contour flooding algorithm, the order in which users update their neighbors depends on their distance from P. In the centralized algorithm this is implemented by using a priority queue. In a practical scenario where users only communicate with their one-hop neighbors a priority queue cannot be used. The algorithm is made distributed by implementing the distance dependence with a backoff timer. The purpose of the backoff timer is to generate a random time delay within a certain interval CW. Internal users of P update their neighbors first in a random order. By giving each internal user a backoff timer in the range of [0..CW] it is ensured that after time CW all internal users will have updated their neighbors. An internal user $i$ has for example a timer with backoff $B_i$. When a neighbor $j$ of this user receives an update and his footpoint is changed, this neighbor also starts a timer. To ensure that all internal users have updated their neighbors before the update of $j$ starts, user $j$ has to wait an additional time $CW-B_i$ after the update of $i$. So the timer of $j$ lies in the range of [CW-$B_i$..CW-$B_i$+CW].
+
+Ideally, the time in which the network is updated equals $CW \cdot h$, with h the communication range. The number of messages equals n, with n the number of users in the network. In a practical scenario the update time and number of messages will be larger because of two reasons:
+\begin{itemize}
+ \item Retransmissions are necessary because of collisions.
+\item It is possible that a user starts updating his neighbors before he has obtained his closest footpoint. Wrong information is propagated to the neighbors and the user will have to update his neighbors a second time once he obtained information about his correct footpoint. We say the neighbors are $misclassified$. This is illustrated in figure \ref{fig:misclass}.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.25]{figures/proof2}
+\caption{\label{fig:misclass} The Voronoi tiling indicates that the footpoint of user C is $f_1$. But due to the randomness of the backoff timer, C receives information from B before he receives the correct information from A. Hence C thinks his footpoint is $f_2$. User C will then choose a random backoff timer in the range [(CW-$B_B$)..(CW-$B_B$)+CW] to start updating his neighbors. If C does not receive his correct footpoint before the backoff timer goes off, wrong information will be propagated and C has to update his neighbors a second time. \cite{sofie}}
+\end{figure}
+
+\section{Pathloss estimation} \label{sec:pathloss est}
+
+When every user knows his distance to the contour of the primary transmitter P, a secondary transmitter S can estimate its optimal transmission power based on a local pathloss estimate computed at the internal user of S that is closest to the primary contour, user $i_{cl}$. First, parameters $\alpha$ and $\beta$ of a pathloss model are computed with a weighted least squares fit at $i_{cl}$. All the neighbors within the kernel width $h$ around $i_{cl}$ are taken into account. This is shown in equation \ref{eq:fit}. Parameter $\alpha$ models the distance dependent trend and $\beta$ entails shadow and antenna losses. $d$ is the distance between the transmitter and receiver. Next, the power of S is computed as the maximal interference power plus the estimated pathloss between S and the contour of the primary transmitter. This is shown in equations \ref{eq:pow1} and \ref{eq:pow2}.
+
+\begin{align}
+&\hat{\alpha}_i,\hat{\beta}_i = \label{eq:fit} \\ \nonumber 
+&arg\min_{\alpha,\beta}\sum_j w_{ij}(\alpha10\log_{10} d(S,j)+\beta-\textrm{pathloss}_j)^2 \\
+&\textrm{pathloss}(S,f_{i_{cl}})=\hat{\alpha}10\log_{10}d(S,f_{i_{cl}})+\hat{\beta} \label{eq:pow1} \\
+&\hat{\textrm{power}}_S=RSS_{th}+\textrm{pathloss}(S,f_{i_{cl}}) \label{eq:pow2}
+\end{align}
+
+
+\section{Example scenarios}
+Give some example scenarios with the performance.
+Performance metrics: 
+\begin{itemize}
+ \item number of iterations of the IPA algorithm
+ \item Percentage of the range of the primary transmitter that is overlapped by the secondary transmitter (measure of interference)
+\end{itemize}
+
+
+\section{Adaptation of the distance-to-contour flooding algorithm}
+Adaptation of the DTC1 algorithm based on the polygon tiling algorithm
+
+\section{Performance}
+
+\begin{itemize}
+\item delivery ratio (Number of users in the network actually receiving the updates)
+\item Ratio of broadcasts
+\item Ratio of misclassified users
+\item Average error when misclassified
+\item Percentage misclassified but corrected
+\end{itemize}
+
+\section{Conclusion}
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+%\begin{thebibliography}{1}
+\bibliographystyle{IEEEtran}
+\bibliography{paper}
+%\end{thebibliography}
+
+
+\end{document}
+
+

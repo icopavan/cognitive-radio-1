@@ -1,0 +1,1 @@
+optie -dEPSCrop gebruiken om de juiste bounding box te krijgen en niet de hele A4 pagina met te veel white space 

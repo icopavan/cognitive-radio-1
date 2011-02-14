@@ -1,0 +1,36 @@
+@ARTICLE{test,
+author={Pollin, S. and Adams, B. and Bahai, A.},
+journal={Communications, 2008. ICC '08. IEEE International Conference on}, title={Spatial Reuse for Practical Scenarios: Iterative Power Adjustment from Distributed Contour Estimation and Propagation},
+year={2008},
+month={may.},
+volume={},
+number={},
+pages={2655 -2661},
+keywords={channel modeling;distributed contour estimation;iterative power adjustment;power control;propagation contour;spatial reuse;wireless access technology;wireless networks;wireless transmitters;channel estimation;electromagnetic wave propagation;iterative methods;radio networks;},
+doi={10.1109/ICC.2008.502},
+ISSN={},}
+
+% Oorsprong van het distance to contour flooding algoritme
+@ARTICLE{dtc,
+author={Fan Ye and Chen, A. and Songwu Lu and Lixia Zhang},
+journal={Computer Communications and Networks, 2001. Proceedings. Tenth International Conference on}, title={A scalable solution to minimum cost forwarding in large sensor networks},
+year={2001},
+month={},
+volume={},
+number={},
+pages={304 -309},
+keywords={backoff-based cost field;dynamic cost states;large sensor networks;minimum cost forwarding;minimum-cost path;optimal costs;protocols;wireless sensor networks;distributed sensors;minimisation;packet radio networks;protocols;telecommunication network routing;},
+doi={10.1109/ICCCN.2001.956276},
+ISSN={},}
+
+@ARTICLE{dtc2,
+author={In Hur and Trong Duc Le and Hyunseung Choo},
+journal={Advanced Communication Technology, 2009. ICACT 2009. 11th International Conference on}, title={Efficient flooding scheme based on regular polygonal tiling in wireless ad hoc networks},
+year={2009},
+month={feb.},
+volume={01},
+number={},
+pages={810 -814},
+keywords={flooding scheme;regular polygonal tiling scheme;wireless ad hoc network;ad hoc networks;},
+doi={},
+ISSN={1738-9445},}

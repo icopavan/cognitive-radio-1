@@ -1,0 +1,13 @@
+% De paper van Sofie
+
+@INPROCEEDINGS{sofie,
+author={Pollin, S. and Adams, B. and Bahai, A.},
+journal={Communications, 2008. ICC '08. IEEE International Conference on}, title={Spatial Reuse for Practical Scenarios: Iterative Power Adjustment from Distributed Contour Estimation and Propagation},
+year={2008},
+month={may.},
+volume={},
+number={},
+pages={2655 -2661},
+keywords={channel modeling;distributed contour estimation;iterative power adjustment;power control;propagation contour;spatial reuse;wireless access technology;wireless networks;wireless transmitters;channel estimation;electromagnetic wave propagation;iterative methods;radio networks;},
+doi={10.1109/ICC.2008.502},
+ISSN={},}
