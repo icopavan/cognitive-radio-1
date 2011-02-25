@@ -6,7 +6,7 @@ The goal of the IPA algorithm is to find the optimal transmission power of any s
 Radio propagation is typically modeled by a model consisting of three components: a distance dependent path loss trend, shadowing and fast fading. Shadow losses cause the received signal strength (RSS) to vary slowly in time and space around the distance dependent trend. Fast fading originates from multipath effects and causes the RSS to vary on a small scale \cite{bookPathlossModel}. Pollin, Adams and Bahai deduce from experiments that propagation conditions are difficult to model globally\footnote{In the measurement campaign of Pollin, Adams and Bahai \cite{sofie} the RSS from an 802.11 antenna on top of Cory Hall at UC Berkeley is measured in the area. They make three observations from the measurements. First, there is no obvious relationship between the RSS and the distance between the transmitter and the receiver. Second, the measurements show that shadowing is an anisotropic effect. Last, fast fading causes the RSS measurements to be noisy.}\cite{sofie}. Therefore, the IPA algorithm does not rely on a global propagation model but uses only local RSS measurements.
 
 \subsection{Distance to contour flooding}
-To detect the primary users and compute the distance between the transmission range of a primary user and the secondary user, no expensive sensing techniques are used. Instead, a more cost efficient distance-to-contour (DTC) flooding algorithm is used. This algorithm uses a back-off timer to decrease the number of forwarded messages with respect to regular flooding \cite{dtc}. With the DTC flooding algorithm, the number of forwarded messages is slightly larger than $n$, with $n$ being the number of users in the network. In this paper we develop an alternative distance-to-contour flooding algorithm which decreases the number of forwarded messages. This adapted flooding algorithm, DTC2, is based on the polygon tiling algorithm proposed by In, Trong and Hyunseung \cite{dtc2}.
+To detect the primary users and compute the distance between the transmission range of a primary user and the secondary user, no expensive sensing techniques are used. Instead, a more cost efficient distance-to-contour (DTC) flooding algorithm is used. This algorithm uses a back-off timer to decrease the number of forwarded messages with respect to regular flooding \cite{dtc}. With the DTC flooding algorithm, the number of forwarded messages is slightly larger than $n$, with $n$ being the number of users in the network. In this paper we develop an alternative distance-to-contour flooding algorithm which decreases the number of forwarded messages. This adapted flooding algorithm, DTC2, is based on the polygon tiling algorithm proposed by Hur et. al. \cite{dtc2}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -23,21 +23,21 @@ First, receivers of the primary transmitters compute their $\hat{RSS}$ to find t
 
 Reliable RSS estimates are needed for two reasons: To determine the interference threshold contours and to make accurate path loss estimations. The individual RSS measurements are noisy due to fast fading. In order to average out this noise, a MLS algorithm is used. This has the advantage that it does not rely on a global path loss model.
 
-The MLS algorithm does not only take into account the RSS measurement of the user where the estimate is computed but also the measurements from the neighboring users. The size of the neighborhood is defined by a spatial weighting function (also called \textit{kernel function}). Assume we want to determine the $\hat{RSS}$ of user $N$ at position $x_N$. We search the coefficients $\vec{a}$ of a polynomial $\vec{p}$ by minimizing the weighted least squares function from equation \ref{eq:wls}. Polynomial $\vec{p}$ approximates the local RSS variations in the environment. To find $\vec{a}$, the local received power $RSS_N$ of user $N$ is taken into account together with the local received power $RSS_i$ of the neighbors of $N$, with $i=1..\#$Neighbors.
+The MLS algorithm does not only take into account the RSS measurement of the user where the estimate is computed but also the measurements from the neighboring users. The size of the neighborhood is defined by a spatial weighting function (also called \textit{kernel function}). Assume we want to determine the $\hat{RSS}$ of user $N$ at position $x_N$. We search the coefficients $\vec{a}$ of a polynomial $\vec{p}$ by minimizing the weighted least squares function from equation \ref{eq:wls}. Polynomial $\vec{p}$ approximates the local RSS variations in the environment. To find $\vec{a}$, the local received power $RSS_N$ of user $N$ is taken into account together with the local received power $RSS_i$ of the neighbors of $N$, with $i=1..\#$Neighbors :
 \begin{equation} \label{eq:wls}
-\hat{\vec{a}}_N = \arg \min_a \sum_i w_{Ni}(\vec{a}^T \vec{p}(\vec{x}_i)-\vec{RSS_i})^2
+\hat{\vec{a}}_N = \arg \min_a \sum_i w_{Ni}(\vec{a}^T \vec{p}(\vec{x}_i)-\vec{RSS_i})^2 \nonumber
 \end{equation}
-The local RSS measurements are weighted by $w_{Nj}$ according to the distance from user $N$, as demonstrated in equation \ref{eq:wij}.
+The local RSS measurements are weighted by $w_{Nj}$ according to the distance from user $N$, as demonstrated here:
 \begin{equation} \label{eq:wij}
 w_{Ni} = \begin{cases} 
-(1-r_{Ni}^2)^3 &  \text{, if $r_{Ni} \leq 1$} \\ 
+(1-r_{Ni}^2)^3 &  \text{, if $r_{Ni} \leq 1$} \nonumber \\ 
 0 & \text{, otherwise}
 \end{cases}
 \end{equation}
 $r_{Ni}$ is the normalized distance between user $N$ and $i$. The distance is normalized by the kernel width $h$ as follows: $r_{Ni}=\frac{\begin{Vmatrix}\vec{x}_N-\vec{x}_i\end{Vmatrix}}{h}$.
-From the coefficients $\hat{\vec{a}}_N$ we can compute $\hat{RSS}_N$:
+From the coefficients $\hat{\vec{a}}_N$ we can compute $\hat{RSS}_N$ as:
 \begin{equation}
-\hat{RSS}_N = \hat{\vec{a}}^T_N \cdot \vec{p}(\vec{x}_N)
+\hat{RSS}_N = \hat{\vec{a}}^T_N \cdot \vec{p}(\vec{x}_N) \nonumber
 \end{equation}
 
 The MLS algorithm has two parameters: kernel width $h$ and the polynomial order of $\vec{p}$. These parameters depend on the noise power and can be optimized with respect to the average squared error on $\hat{RSS}$. This is demonstrated in the work of Pollin, Adams and Bahai \cite{sofie}. 
@@ -67,7 +67,7 @@ The centralized version of the DTC algorithm uses a priority queue to keep track
 
 To minimize the number of forwarding messages in the distance-to-contour flooding algorithm, the order in which users update their neighbors depends on their distance from P. In the centralized algorithm this is implemented by using a priority queue. In a practical scenario where users only communicate with their one-hop neighbors a priority queue cannot be used. The algorithm is made distributed by implementing the distance dependence with a back-off timer. 
 
-Ideally, the time in which the network is updated equals $CW \cdot h$, with $h$ the communication range. The number of messages equals $n$, with $n$ the number of users in the network. In a practical scenario the update time and number of messages will be larger because of two reasons: 
+Ideally, the time in which the network is updated equals $CW \cdot h$, with $h$ the communication range. The number of messages equals $n$, with $n$ the number of users in the network. In a practical scenario the update time and number of messages will be larger due to two reasons: 
  
 \begin{itemize}
  \item Retransmissions are necessary because of collisions.
@@ -77,7 +77,7 @@ Ideally, the time in which the network is updated equals $CW \cdot h$, with $h$ 
 \begin{figure}
 \centering
 \includegraphics[scale=0.25]{figures/algorithm/proof2}
-\caption{\label{fig:misclass}\cite{sofie} Users with the same footpoint are grouped together by a Voronoi Tiling. User C has footpoint $f_1$ and it lies in the transmission range of both users A and B. If the backoff timer of B goes off before the back-off timer of A, user C gets updated first by user B and it will incorrectly store $f_2$ as its footpoint. After user C is updated by user B, it starts a back-off timer to update its neighbors. However, when the back-off timer of user A goes off, C receives its correct footpoint $f_1$. If C has already updated its neighbors before it receives the update from A, user C will have to update its neighbors a second time.}
+\caption{\label{fig:misclass}Users with the same footpoint are grouped together by a Voronoi Tiling. User C has footpoint $f_1$ and it lies in the transmission range of both users A and B. If the backoff timer of B goes off before the back-off timer of A, user C gets updated first by user B and it will incorrectly store $f_2$ as its footpoint. After user C is updated by user B, it starts a back-off timer to update its neighbors. However, when the back-off timer of user A goes off, C receives its correct footpoint $f_1$. If C has already updated its neighbors before it receives the update from A, user C will have to update its neighbors a second time. Figure from Pollin et.al. \cite{sofie} }
 \end{figure}
 
 \subsection{Path loss estimation} \label{sec:pathloss est}
@@ -94,9 +94,9 @@ Note that it is hypothesized that the local path loss estimation at $i_{cl}$ giv
 
 \subsection{Path loss model}
 
-The IPA algorithm is tested in a simulated two-dimensional environment. In this section we present the path loss model used to simulate radio propagation conditions. It is shown in Eq.~\ref{eq:plModel} and consists of four components which we discuss below: A distance dependent trend, antenna losses, shadowing and fast fading. 
+The IPA algorithm is tested in a simulated two-dimensional environment. In this section we present the path loss model used to simulate radio propagation conditions. The path loss $PL$ consists of four components which we discuss below: A distance dependent trend, antenna losses, shadowing and fast fading:
 \begin{equation} \label{eq:plModel}
-PL=10\alpha\log(d)+\gamma+L_S+X_{\sigma}
+PL=10\alpha\log(d)+\gamma+L_S+X_{\sigma} \nonumber
 \end{equation}
 First, path loss increases exponentially with the distance $d$ from the transmitter. The rate of increase is modeled by parameter $\alpha$. Second, antenna losses are modeled by parameter $\gamma$. Third, shadow losses, $L_S$, are modeled by placing buildings in the scenario as explained in the work of Pollin, Adams and Bahai \cite{sofie}. Last, fast fading is modeled as Gaussian noise, $X_{\sigma}$, with variance $\sigma^2$. Pollin, Adams and Bahai showed that $\sigma^2=4$ is a realistic value for fast fading, thus this value is used in our simulations \cite{sofie}. However, the exact parameters of the path loss model are not important because the IPA algorithm only makes use of local path loss measurements.
 

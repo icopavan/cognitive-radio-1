@@ -292,19 +292,62 @@
 
 % author names and affiliations
 
-%\author{Gitte Vanwinckelen~$^{1}$ Martijn Van Otterlo~$^{1}$  Kurt Driessens~$^{1}$ Sofie Pollin~$^{2}$ \\
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+%\author{\IEEEauthorblockN{Gitte Vanwinckelen \and Martijn Van Otterlo}
+%\IEEEauthorblockA{Department of Computer Science\\
+%Katholieke Universiteit Leuven\\
+%Belgium\\
+%Email: \{gitte\}.\{vanwinckelen\}@cs.kuleuven.be}
+%\and
+%\IEEEauthorblockN{Martijn Van Otterlo}
+%\IEEEauthorblockA{Twentieth Century Fox\\
+%Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\and
+%\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+%\IEEEauthorblockA{Starfleet Academy\\
+%San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212\\
+%Fax: (888) 555--1212}}
+
+%\author{Gitte Vanwinckelen~$^{1}$ Martijn Van Otterlo~$^{1}$  Kurt Driessens~$^{2}$ Sofie Pollin~$^{3}$ \\
 % \\
 %$^1$ Katholieke Universiteit Leuven ~~ E-mail~:~ \{gitte\}.{\{vanwinckelen\}@cs.kuleuven.be}\\
-%$^2$ Interuniversity Micro-Electronics Center ~~E-mail~:~ pollins@imec.be \\}
+%$^2$ Department of Knowledge Engineering ~~ E-mail~:~ \{gitte\}.{\{vanwinckelen\}@cs.kuleuven.be}\\
+%$^3$ Interuniversity Micro-Electronics Center ~~E-mail~:~ pollins@imec.be \\}
 
-\author{\IEEEauthorblockN{Gitte Vanwinckelen\IEEEauthorrefmark{1},  Martijn Van Otterlo\IEEEauthorrefmark{1},  Kurt Driessens\IEEEauthorrefmark{1} and  Sofie Pollin\IEEEauthorrefmark{2}}
+\author{\IEEEauthorblockN{Gitte Vanwinckelen\IEEEauthorrefmark{1},  Martijn Van Otterlo\IEEEauthorrefmark{1},  Kurt Driessens\IEEEauthorrefmark{2} and  Sofie Pollin\IEEEauthorrefmark{3}}
 \IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Computer Science\\
 Katholieke Universiteit Leuven, Belgium\\
-Email:  \{gitte\}.\{vanwinckelen\}@cs.kuleuven.be}
-\IEEEauthorblockA{\IEEEauthorrefmark{2}Interuniversity Micro-Electronics Center,  Leuven, Belgium\\
+Email:  gitte.vanwinckelen@cs.kuleuven.be, martijn.vanotterlo@cs.kuleuven.be}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Knowledge Engineering\\
+Maastricht University, Netherlands\\
+Email:  kurt.driessens@maastrichtuniversity.nl}
+\IEEEauthorblockA{\IEEEauthorrefmark{3}Interuniversity Micro-Electronics Center \\
+Leuven, Belgium\\
 Email:  pollins@imec.be}
 }
 
+
+%\author{\IEEEauthorblockN{Gitte Vanwinckelen, Martijn Van Otterlo}
+%\IEEEauthorblockA{Department of Computer Science\\
+%Katholieke Universiteit Leuven\\
+%Belgium\\
+%Email:  gitte.vanwinckelen@cs.kuleuven.be \\
+%martijn.vanotterlo@cs.kuleuven.be}
+%\and
+%\IEEEauthorblockN{Kurt Driessens}
+%\IEEEauthorblockA{Department of Knowledge Engineering\\
+%Maastricht University \\
+%Netherlands\\
+%Email:  kurt.driessens@maastrichtuniversity.nl}
+%\and
+%\IEEEauthorblockN{Sofie Pollin}
+%\IEEEauthorblockA{Interuniversity Micro-Electronics Center,\\
+%Leuven, Belgium\\
+%Email:  pollins@imec.be}}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -344,7 +387,7 @@ Email:  pollins@imec.be}
 \begin{abstract}
 %\boldmath
 % Exact 200 woorden ! 
-An important aspect of spectrum sharing is reliable protection of licensed, primary, users from interference by unlicensed, secondary, users. In this paper we investigate the reliability of the iterative power adjustment algorithm proposed by Pollin, Adams and Bahai (2008). The goal of this transmission power control algorithm is to allow a static secondary transmitter to maximize its power without interfering with primary users. A distributed flooding algorithm is used to detect primary users and estimate the distance to the primary propagation contour. The secondary transmitter makes a local channel estimation with a moving least squares algorithm to average out noise. The metric used to estimate interference is the propagation contour-contour distance between the secondary and primary transmitters. In our first contribution we investigate the reliability of this metric by computing the location probability, a newly proposed metric for configuring Digital Terrestrial Television networks. We show that the propagation contour-contour distance is correlated with the location probability. In a second contribution we make the flooding algorithm more cost efficient by reducing communication. We then study the influence of the number of flooding messages on the performance of the iterative power adjustment algorithm in terms of location probability and number of iterations.
+An important aspect of spectrum sharing is reliable protection of licensed, primary, users from interference by unlicensed, secondary, users. In this paper we investigate the reliability of the iterative power adjustment algorithm proposed by Pollin, Adams and Bahai (2008). The goal of this transmission power control algorithm is to allow a static secondary transmitter to maximize its power without interfering with primary users. A distributed flooding algorithm is used to detect primary users and estimate the distance to the primary propagation contour. The secondary transmitter makes a local channel estimation with a moving least squares algorithm to average out noise. The metric used to estimate interference is the propagation contour-contour distance between the secondary and primary transmitters. In our first contribution we investigate the reliability of this metric by computing the location probability, a new FCC proposed metric for configuring Digital Terrestrial Television networks. We show that the propagation contour-contour distance is correlated with the location probability. In a second contribution we make the flooding algorithm more cost efficient by reducing communication. We then study the influence of the number of flooding messages on the performance of the iterative power adjustment algorithm in terms of location probability and number of iterations.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -375,7 +418,7 @@ An important aspect of spectrum sharing is reliable protection of licensed, prim
 
 \section{Conclusions and future work}\label{sec:conc}
 We investigated the reliability of the IPA algorithm proposed by Pollin, Adams and Bahai \cite{sofie} in terms of location probability. This algorithm allows a static secondary transmitter to maximize its power without interfering with primary users. As an interference metric, the propagation contour-contour distance between the secondary and primary transmitter is used. Our simulations showed that this metric is correlated with the location probability and that the IPA algorithm makes a reliable estimation of the maximum allowed power of a secondary transmitter. 
-To detect primary users and estimate the distance to the primary propagation contour, a distributed flooding algorithm, DTC, is used. To reduce the redundancy in communication, we proposed the DTC2 flooding algorithm that selects a subset of forwarding users. Our experiments showed that the reliability of the IPA algorithm is not reduced by using DTC2. 
+To detect primary users and estimate the distance to the primary propagation contour, a distributed flooding algorithm, DTC, is used. To reduce the redundancy in communication, we proposed the DTC2 flooding algorithm that selects a subset of forwarding users. The algorithm reduces the number of transmissions at the cost of two things. First, we assume every user has a limited computation power available to select a subset of forwarding neighbors. However, this assumption is often valid in ad-hoc sensor networks because it is necessary for robust and scalable communication algorithms (Referentie!). Second, for a large delivery ratio DTC2 is best used in a network with a high user density. 
 
 There are a number of options to improve our current algorithms. First, there is extensive literature on efficient flooding algorithms. Next to DTC2, we propose to investigate other cost efficient flooding algorithms and study their effect on the reliability of the IPA algorithm. Second, we want to investigate the robustness of the path loss estimation step to outliers and possibly improve this robustness. Last, the algorithm can be extended to also handle moving secondary transmitters.
 

@@ -9,9 +9,9 @@ To determine the maximum transmission power of a secondary transmitter and ensur
 \setcounter{footnote}{2}
 \footnotetext{In this section we follow the description given in ECC report 159 \cite{ecc}.}
 
-The location probability $q$ is defined as the probability with which a primary DTT receiver would operate correctly at a specific location, or gridpoint; i.e., the probability with which the median wanted signal level $P_P$ is appropriately greater then a minimum required value ;i.e.,
+The location probability $q$ is defined as the probability with which a primary DTT receiver would operate correctly at a specific location, or gridpoint; i.e., the probability with which the median wanted signal level $P_P$ is appropriately greater then a minimum required value; i.e.,
 \begin{equation} \label{eq:lp}
-q=Pr\{P_P\geq P_{P,min}+\sum_{i=1}^K r_{S,i}P_{S,i}\}=Pr\{P_P\geq S\} 
+q=Pr\{P_P\geq P_{P,min}+\sum_{i=1}^K r_{S,i}P_{S,i}\}=Pr\{P_P\geq S\} \nonumber
 \end{equation}
 In this formula, $P_{P,min}$ is the primary receiver's (noise-limited) reference sensitivity level \footnote{The reference sensitivity level of a receiver is the minimum wanted signal power for which the receiver can operate correctly in a noise-limited environment.}, $P_{S,i}$ is the received power of the $i^{th}$ unwanted, secondary, DTT signal and $r_{S,i}$ is the DTT-to-DTT protection ratio for the $i^{th}$ DTT transmitter; i.e., the minimum ratio of the wanted signal power and the interference signal power necessary for correct operation of the receiver. In the path loss model used in the simulations, the RSS at a gridpoint is a Gaussian variable were the mean $m$ is determined by the distance from the transmitter, antenna losses and shadowing. The variance $\sigma^2$ is determined by the amount of fast fading. Consider a gridpoint were a receiver senses the primary and secondary transmitter. We compute $Pr\{P_P\geq S\}$ at this gridpoint with Eq.~\ref{eq:lpCDF}.  as illustrated in Fig.~\ref{fig:compLP}. 
 
@@ -20,7 +20,7 @@ In this formula, $P_{P,min}$ is the primary receiver's (noise-limited) reference
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{figures/contribution1/distri.pdf}
-\caption{\label{fig:compLP} \cite{ecc} The Gaussian distributions of the power of a secondary transmitter $S$ and a primary transmitter $P$ at one gridpoint. To compute the location probability at a location, we compute $Pr\{P_P\geq S\}$.}
+\caption{\label{fig:compLP} The Gaussian distributions of the power of a secondary transmitter $S$ and a primary transmitter $P$ at one gridpoint. To compute the location probability at a location, we compute $Pr\{P_P\geq S\}$. Figure from \cite{ecc} }
 \end{figure}
 
 \begin{equation} \label{eq:lpCDF}
@@ -33,7 +33,7 @@ A simulation of the IPA algorithm is shown in Fig.~\ref{fig:iterationsLP}. The e
 
 \input{table}
 
-In the second column of the table, $\Delta$ indicates the decrease of the area, $A$(textit{with SU}), of the $95\%$ location probability contour of the primary transmitter in comparison with the area of the contour when there is no interference from a secondary transmitter, $A$(\textit{no SU}), as shown in Eq.~\ref{eq:deltalp}. The decrease is indicated for every iteration of the IPA algorithm.
+In the second column of the table, $\Delta$ indicates the decrease of the area, $A$ (\textit{with SU}), of the $95\%$ location probability contour of the primary transmitter in comparison with the area of the contour when there is no interference from a secondary transmitter, $A$ (\textit{no SU}), as shown in Eq.~\ref{eq:deltalp}. The decrease is indicated for every iteration of the IPA algorithm.
 
 \begin{equation} \label{eq:deltalp}
 \Delta=\frac{A(\textrm{\textit{no SU}})-A(\textrm{\textit{with SU}})}{A(\textrm{\textit{no SU}})}

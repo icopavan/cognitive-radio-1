@@ -1,21 +1,23 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: C:\Users\gitte\Documents\DySPAN\paper.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: C:\Users\gitte\cognitive-radio\paper.aux
 The style file: IEEEtran.bst
 Database file #1: paper.bib
 Warning--string name "april" is undefined
---line 56 of file paper.bib
+--line 57 of file paper.bib
 Warning--string name "quarter" is undefined
---line 68 of file paper.bib
+--line 69 of file paper.bib
 Warning--string name "oct." is undefined
---line 80 of file paper.bib
+--line 81 of file paper.bib
 Warning--string name "oct." is undefined
---line 93 of file paper.bib
+--line 94 of file paper.bib
 Warning--string name "jan." is undefined
---line 122 of file paper.bib
+--line 123 of file paper.bib
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty author in fcc
+Warning--missing institution in fcc
 Warning--empty author in ecc
 Warning--missing institution in ecc
 
 Done.
-(There were 7 warnings)
+(There were 9 warnings)

@@ -31,9 +31,15 @@ T.~Yucek and H.~Arslan, ``A survey of spectrum sensing algorithms for cognitive
   radio applications,'' \emph{Communications Surveys Tutorials, IEEE}, vol.~11,
   no.~1, pp. 116 --130, 2009.
 
+\bibitem{fcc}
+``Second memorandum opinion and order. in the matter of unlicensed operation in
+  the tv broadcast bands, additional spectrum for unlicensed devices below 900
+  {MHz} and in the 3 {GHz} band,'' Federal Communications Commission, Document
+  10-174, 23 Sep. 2010.
+
 \bibitem{geoLocDyspan}
 D.~Gurney, G.~Buchwald, L.~Ecklund, S.~Kuffner, and J.~Grosspietsch,
-  ``Geo-location database techniques for incumbent protection in the tv white
+  ``Geo-location database techniques for incumbent protection in the {TV} white
   space,'' in \emph{New Frontiers in Dynamic Spectrum Access Networks, 2008.
   DySPAN 2008. 3rd IEEE Symposium on}, 2008, pp. 1 --9.
 
@@ -47,12 +53,12 @@ G.~Buchwald, S.~Kuffner, L.~Ecklund, M.~Brown, and E.~Callaway, ``The design
 S.~Pollin, B.~Adams, and A.~Bahai, ``Spatial reuse for practical scenarios:
   Iterative power adjustment from distributed contour estimation and
   propagation,'' \emph{Communications, 2008. ICC '08. IEEE International
-  Conference on}, pp. 2655 --2661, may. 2008.
+  Conference on}, pp. 2655 --2661, May 2008.
 
 \bibitem{ecc}
 ``Technical and operational requirements for the possible operation of
   cognitive radio systems in the 'white spaces' of the frequency band 470-790
-  mhz,'' CEPT ECC Report 159, draft SE43(10)126-Annex 3, 2010, see
+  {MHz},'' CEPT ECC Report 159, draft SE43(10)126-Annex 3, 2010, see
   http://www.cept.org/764D6AAF-6354-49CD-B981-FA4B46AF493E.W5Doc.
 
 \bibitem{bookPathlossModel}
@@ -70,7 +76,7 @@ F.~Ye, A.~Chen, S.~Lu, and L.~Zhang, ``A scalable solution to minimum cost
 I.~Hur, T.~D. Le, and H.~Choo, ``Efficient flooding scheme based on regular
   polygonal tiling in wireless ad hoc networks,'' \emph{Advanced Communication
   Technology, 2009. ICACT 2009. 11th International Conference on}, vol.~01, pp.
-  810 --814, feb. 2009.
+  810 --814, Feb. 2009.
 
 \bibitem{storm}
 Y.-C. Tseng, S.-Y. Ni, and E.-Y. Shih, ``Adaptive approaches to relieving
